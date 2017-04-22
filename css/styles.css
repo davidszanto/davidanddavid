@@ -929,7 +929,7 @@ html, body {
         color: #FA173B;
         background-color: #FFDBD9;
         position:relative;
-        padding-right: 0px;
+        padding-left: 0px;
         height: auto;
         left: 0%;
     }
@@ -949,6 +949,7 @@ html, body {
         color: #FA173B;
         background-color: #FFDBD9;
         padding-right: 0px;
+        padding-left: 0px;
         height: auto;
         position: relative;
         left: 0%;
