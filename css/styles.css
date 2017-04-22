@@ -919,31 +919,42 @@ html, body {
 }
 .contact-info .case-item-text {
     max-width: 70%}
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
     .contact-info {
-    padding-right: 50px;
-    height: auto;
+        padding-top: 30px;
+        padding-right: 50px;
+        height: auto;
     }
     .right-contact-info{
         color: #FA173B;
         background-color: #FFDBD9;
-        padding-right: 50px;
+        position:relative;
+        padding-right: 0px;
         height: auto;
+        left: 0%;
+    }
+
+    #szd{
+        padding-top: 0;
     }
 }
 @media all and (max-width: 480px) {
     .contact-info {
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-left: 30px;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
     .right-contact-info{
+        padding-top: 0;
         color: #FA173B;
         background-color: #FFDBD9;
-        padding-right: 50px;
+        padding-right: 0px;
         height: auto;
         position: relative;
         left: 0%;
+    }
+    #szd{
+        padding-top: 0;
     }
 }
 
