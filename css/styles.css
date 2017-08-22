@@ -517,7 +517,8 @@ html, body {
 }
 }.case-items {
     max-width: 1150px;
-    margin: -180px auto 0;
+    height:100vh;
+    margin: 0 auto 0;
     padding: 40px;
     display: flex;
     flex-flow: row wrap;
@@ -1192,4 +1193,27 @@ html, body {
 .form-style-8 input[type="submit"]:hover {
     background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
     background-color:#34CACA;
+}
+
+.portfolio-contaier{
+	height:100vh;
+	display: inline-block;
+}
+
+.portfolio-ul-container{
+	text-align:center;
+	padding-top:10vh;
+	display:inline-block;
+	margin: 0 auto;	
+}
+.portfolio-ul{
+	text-align:left;
+	list-style-image: url('../img/greenthick.png');
+	font-size: 2.2em;
+	margin-top: 1vh;
+}
+
+.portfolio-li{
+	padding:5px;
+	margin-top: 2vh;
 }
