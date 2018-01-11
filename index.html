@@ -1,20 +1,30 @@
 <html>
     <head>
-				<meta charset="UTF-8">
-				<meta http-equiv="X-UA-Compatible" content="IE=edge">
-				<meta name="viewport" content="width=device-width">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/styles.css">
-       
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/title.css">
+		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/portfolio.css">
+
         <link href='https://fonts.googleapis.com/css?family=Merriweather:300italic' rel='stylesheet' type='text/css'>
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" type="text/css">
-				<link rel="preload" href="https://fonts.googleapis.com/css?family=EB+Garamond" type="text/css">
-				<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=EB+Garamond" type="text/css">
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
         <title>david&amp;david</title>
-    </head>
+	</head>
+	
     <body>
-			<div class="portfolio">
+		<!--TOP SEGMENT-->
+		<div class="introduction">
+			<!--MENU-->
+			<div>
 				<div class="menu-animation-wrapper">
 					<div class="menu-animated-background" style="will-change: transform, opacity; opacity: 0; transform: scale(0);"></div>
 				</div>
@@ -38,132 +48,169 @@
 						</ul>
 					</div>
 				</div>
+			</div>
 
-				<h1 class="site-name">
-					<a class="site-name-link" href="#">david&amp;david</a>
+			<h1 class="site-name">
+				<a class="site-name-link" href="#">Kezdőoldal</a>
+			</h1>
+
+			<!--INTRODUCTION-->
+			<div class="fto">
+				<h1 class="ml5">
+					<span class="text-wrapper">
+					<span class="line line1"></span>
+					<span class="letters letters-left">David</span>
+					<span class="letters ampersand">&amp;</span>
+					<span class="letters letters-right">David</span>
+					<span class="line line2"></span>
+					</span>
 				</h1>
 
-        <div class="fto">
-          <h1 class="fto-r1">valami szöveg</h1>
-          <h1 class="fto-r2">-</h1>
-          <h1 class="fto-r3"></h1>
-        </div>
-        
-         <div class="portfolio-contaier">
-					<h2 class="section-header">Amit Vállalunk.</h2>
-					<div class="portfolio-ul-container">
-					<ul class="portfolio-ul">
-					  <li class="portfolio-li">Szofverfejlesztés</li>
-					  <li class="portfolio-li">Webfejlesztés</li>
-					  <li class="portfolio-li">Webshop készítés</li>
-					  <li class="portfolio-li">Raktárnyilvántartás</li>
-					</ul>
-					</div>
-        </div>
-        
-        
-        <div class="case-items">
-					<h2 class="section-header">Munkáink.</h2>
+				<script>
+					anime.timeline({loop: false})
+					.add({
+						targets: '.ml5 .line',
+						opacity: [0.5,1],
+						scaleX: [0, 1],
+						easing: "easeInOutExpo",
+						duration: 700
+					}).add({
+						targets: '.ml5 .line',
+						duration: 600,
+						easing: "easeOutExpo",
+						translateY: function(e, i, l) {
+						var offset = -0.625 + 0.625*2*i;
+						return offset + "em";
+						}
+					}).add({
+						targets: '.ml5 .ampersand',
+						opacity: [0,1],
+						scaleY: [0.5, 1],
+						easing: "easeOutExpo",
+						duration: 600,
+						offset: '-=600'
+					}).add({
+						targets: '.ml5 .letters-left',
+						opacity: [0,1],
+						translateX: ["0.5em", 0],
+						easing: "easeOutExpo",
+						duration: 600,
+						offset: '-=300'
+					}).add({
+						targets: '.ml5 .letters-right',
+						opacity: [0,1],
+						translateX: ["-0.5em", 0],
+						easing: "easeOutExpo",
+						duration: 600,
+						offset: '-=600'
+					}).add({
+						targets: '.introduction',
+						height: '60%',
+						easing: "easeOutExpo",
+						duration: 800
+					});
+				</script>
+			</div>
+		</div>
+		
+		<div class="competences">
+			<h2 class="section-header">Kompetenciáink.</h2>
+		</div>
 
-					<div class="case-item case-item-kkfamily image-ready"><div class="case-item-bg" style="background-image: url(&quot;img/kkfamily-logo.jpg&quot;);"></div>
-						
-						<h3 class="case-item-header">Raktár Nyilvántartó Rendszer</h3>
-						<p class="case-item-text">A KKFamily élelmiszeripari vállalat megrendelésére készítettünk egy raktárnyilvántartó rendszert.</p>
-						
-					</div>
+		<div class="portfolio">
+			<h2 class="section-header">Referenciáink.</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="kkfamily">
 
-					<div class="case-item case-item-studio">
-						<div class="case-item-bg" style="background-image: url(&quot;img/gift2.jpg&quot;);"></div>
-						<span class="button-image-overlay">Nézd meg a honlapot</span>
-						<h3 class="case-item-header">Stúdió<font color="#fff">68</font></h3>
-						<p class="case-item-text">Az egyik legnagyobb magyarországi reklámajándék kereskedő cég a Stúdió68 Reklámajándék Kft weblapját készítettük el.</p>
-						<a href="http://studio68.hu" target="_blank" class="case-item-link"></a>
+						</div>
 					</div>
+					<div class="col-sm-6">
+						<div class="studio68">
 
-					
-        </div>
- 			<div class="case-items">
-					<h2 class="section-header">Céljaink.</h2>
-					<div class="case-item case-item-wide case-item-future image-ready">
-						<h3 class="case-item-header case-item-header-future">Our Future Goals</h3>
-						<p class="case-item-text case-item-text-future">We strongly believe that our partnership lies ahead a long way. We trust <strong>God</strong> to guide us in this journey to the future.</p>
+						</div>
 					</div>
 				</div>
-				
-				<div class="contact-card">
-					<h2 class="section-header">Rólunk.</h2>
+			</div>
+		</div>
 
-					<div class="contact-info" id="vd">
-						<p class="case-item-header case-item-header-peep">David Varga<br><span class="profession">Szoftver fejlesztő</font></p>
+		<!-- ABOUT US-->
+		<div class="contact-card">
+			<h2 class="section-header">Rólunk.</h2>
 
-						<p class="case-item-text">Ha használod valamelyik rendszerünket biztos lehetsz benne hogy tudom mi folyik a háttérben. :)</p>
+			<div class="contact-info" id="vd">
+				<p class="case-item-header case-item-header-peep">David Varga<br><span class="profession">Szoftver fejlesztő mérnökinformatikus</font></p>
 
-							<a class="contact-link" href="http://facebook.com/davefej5">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895" xml:space="preserve">
-									<path id="Blue_1_" fill="#FFF" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812  c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225  H248.082z"/>
-									<path id="f" fill="#1f4954" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935  l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585  v99.803H182.409z"/>
-								</svg>
-							</a>
+				<p class="case-item-text">Ha használod valamelyik rendszerünket biztos lehetsz benne hogy tudom mi folyik a háttérben. :)</p>
 
-							<a class="contact-link" href="https://www.linkedin.com/in/dávid-varga-8b3648b0/">
-								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-									width="30px" height="30px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
-									xml:space="preserve">
-								<g>
-									<path id="LinkedIn" fill="#FFF" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
-										c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
-										v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
-										C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
-										c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
-										M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
-								</g>
-								</svg>
-							</a>
+					<a class="contact-link" href="http://facebook.com/davefej5">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895" xml:space="preserve">
+							<path id="Blue_1_" fill="#05131C" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812  c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225  H248.082z"/>
+							<path id="f" fill="#FF8900" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935  l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585  v99.803H182.409z"/>
+						</svg>
+					</a>
 
-							
-						<div class="contact-picture image-ready"><div class="case-item-bg" style="background-image: url(img/vd.jpg);"></div>
-						</div>
-					</div>
+					<a class="contact-link" href="https://www.linkedin.com/in/dávid-varga-8b3648b0/">
+						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							width="30px" height="30px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+							xml:space="preserve">
+						<g>
+							<path id="LinkedIn" fill="#05131C" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+								c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+								v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+								C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+								c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+								M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+						</g>
+						</svg>
+					</a>
 
-					<div class="contact-info" id="szd">
-						<div class="contact-picture-left image-ready"><div class="case-item-bg" style="background-image: url(img/szd.jpg);"></div>
-						</div>
-						<div class="right-contact-info">
-							<p class="case-item-header case-item-header-peep">David Szanto<br><span class="profession">Szoftver fejlesztő</font></p>
+					
+				<div class="contact-picture image-ready"><div class="case-item-bg" style="background-image: url(img/vd.jpg);"></div>
+				</div>
+			</div>
 
-							<p class="case-item-text">Feladatom, hogy ha ránézel egy oldalunkra biztosan többet akarj.</p>
-							
-							<a class="contact-link" href="http://facebook.com/davidsszanto">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895" xml:space="preserve">
-									<path id="Blue_1_" fill="#FA173B" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812  c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225  H248.082z"/>
-									<path id="f" fill="#FFDBD9" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935  l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585  v99.803H182.409z"/>
-								</svg>
-							</a>
+			<div class="contact-info" id="szd">
+				<div class="contact-picture-left image-ready"><div class="case-item-bg" style="background-image: url(img/szd.jpg);"></div>
+				</div>
+				<div class="right-contact-info">
+					<p class="case-item-header case-item-header-peep">David Szanto<br><span class="profession">Szoftver fejlesztő mérnökinformatikus</font></p>
 
-							<a class="contact-link" href="https://www.linkedin.com/in/szántó-dávid-9a7779a3">
-								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-									width="30px" height="30px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
-									xml:space="preserve">
-								<g>
-									<path id="LinkedIn" fill="#FA173B" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
-										c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
-										v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
-										C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
-										c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
-										M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
-								</g>
-								</svg>
-							</a>
+					<p class="case-item-text">Vallom, hogy a programozás művészet, ki kéne állítani néhány művet!</p>
+					
+					<a class="contact-link" href="http://facebook.com/davidsszanto">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895" xml:space="preserve">
+							<path id="Blue_1_" fill="#05131C" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812  c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225  H248.082z"/>
+							<path id="f" fill="#FF8900" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935  l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585  v99.803H182.409z"/>
+						</svg>
+					</a>
 
-							
+					<a class="contact-link" href="https://www.linkedin.com/in/szántó-dávid-9a7779a3">
+						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							width="30px" height="30px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"
+							xml:space="preserve">
+						<g>
+							<path id="LinkedIn" fill="#05131C" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+								c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+								v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+								C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+								c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+								M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+						</g>
+						</svg>
+					</a>
 
-						</div>
-					</div>
+					
 
 				</div>
 			</div>
-			<script src="js/jquery1.12.4.js"></script>
-			<script src="js/animate.js"></script>
-			<script src="js/app.js"></script>
+
+		</div>
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/animate.js"></script>
+		<script src="js/app.js"></script>
     </body>
 </html>
