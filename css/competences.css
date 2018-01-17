@@ -1,0 +1,58 @@
+.competences{
+    height: 800px;
+    max-width: 1150px;
+    margin: 100px auto 0;
+    padding: 40px;
+}
+@media all and (max-width: 900px) {
+    .competences {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+}@media all and (max-width: 600px) {
+    .competences {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+}
+
+#content{
+    overflow: hidden;
+    height: 50%;
+    padding: 0;
+}
+
+.custom_software{
+    background-image: url("../img/software_development.jpg");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    transition: all 0.2s ease-in-out
+}
+.custom_software:hover{
+    transform: scale(1.03, 1.03);
+}
+
+
+.artificial_intelligent{
+    background-color: #FF8900;
+    height: 100%;
+}
+
+.web_guidance{
+    background-color: white;
+    background-image: url("../img/web_development.jpg");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    transition: all 0.2s ease-in-out
+}
+.web_guidance:hover{
+    transform: scale(1.03, 1.03);
+}
+
