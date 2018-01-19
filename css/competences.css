@@ -1,5 +1,5 @@
 .competences{
-    height: 800px;
+    min-height: 800px;
     max-width: 1150px;
     margin: 100px auto 0;
     padding: 40px;
@@ -24,26 +24,6 @@
 }
 
 .custom_software{
-    background-image: url("../img/software_development.jpg");
-    background-position: center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-
-    height: 100%;
-    transition: all 0.2s ease-in-out
-}
-.custom_software:hover{
-    transform: scale(1.03, 1.03);
-}
-
-
-.artificial_intelligent{
-    background-color: #FF8900;
-    height: 100%;
-}
-
-.web_guidance{
-    background-color: white;
     background-image: url("../img/web_development.jpg");
     background-position: center;
     background-size: auto 100%;
@@ -51,8 +31,70 @@
 
     height: 100%;
     transition: all 0.2s ease-in-out
+} 
+
+.artificial_intelligence{
+    background-image: url("../img/ai.png");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
 }
-.web_guidance:hover{
-    transform: scale(1.03, 1.03);
+
+.web_guidance{
+    background-color: white;
+    background-image: url("../img/enterprise.jpg");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    transition: all 0.2s ease-in-out
 }
+
+.filtered_black{
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    width: 100%;
+    display: table;
+}.filtered_purple{
+    background-color: rgba(89, 11, 56, 0.93);
+    height: 100%;
+    width: 100%;
+    display: table;
+}.filtered_blue{
+    background-color: rgba(47, 77, 112, 0.93);
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.competence_title{
+    color: white;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30px;
+    animation: fade-In 0.6s ease-out;
+    transition: transform 0.3s cubic-bezier(0.215,  0.61,  0.355,  1);
+
+    width: 100%;
+    height: 100%;
+}.competence_title:hover{
+    padding-top: 5%;
+    transform: translateY(-50px);
+}.competence_title>.competence_details{
+    display: none;
+    font-size: 17px;
+    padding: 5px;
+
+    animation: fade-In 0.6s ease-out;
+    transition: transform 0.3s cubic-bezier(0.215,  0.61,  0.355,  1);
+}.competence_title:hover>.competence_details{
+    display: inline-block;
+}
+
+
 
