@@ -644,8 +644,8 @@ p {
 @media all and (max-width: 480px) {
     .contact-info {
         padding-top: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
     .right-contact-info{
         padding-top: 0;
@@ -684,7 +684,6 @@ p {
 @media all and (max-width: 800px) {
     .contact-picture {
         width: 100%;
-        left: -50px;
         padding-left: 50px;
         padding-right: inherit;
         height: 400px;
@@ -879,5 +878,5 @@ p {
 }
 
 .case-item-contact{
-    background-color: #DAE8DB;
+    background-color: #FF8900;
 }
