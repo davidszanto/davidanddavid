@@ -175,7 +175,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="background">
+						<div class="background" id="kk">
 							<div class="kkfamily">
 							</div>
 						</div>
@@ -183,7 +183,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="background">
+						<div class="background" id="68">
 							<div class="studio68">
 
 							</div>
@@ -194,7 +194,41 @@
 		</div>
 
 		<script>
-			//Animation comes here!
+			$("#kk").hover(function() {
+				anime.timeline().add({
+					targets: '.kkfamily',
+					width: ['100%', '50%'],
+					easing: "easeOutExpo",
+					duration: 800
+				});
+			});
+
+			$("#kk").mouseout(function() {
+				anime.timeline().add({
+					targets: '.kkfamily',
+					width: ['50%', '100%'],
+					easing: "easeOutExpo",
+					duration: 800
+				});
+			});
+
+			$("#68").hover(function() {
+				anime.timeline().add({
+					targets: '.studio68',
+					width: ['100%', '50%'],
+					easing: "easeOutExpo",
+					duration: 800
+				});
+			});
+
+			$("#68").mouseout(function() {
+				anime.timeline().add({
+					targets: '.studio68',
+					width: ['50%', '100%'],
+					easing: "easeOutExpo",
+					duration: 800
+				});				
+			});
 		</script>
 
 		<!-- ABOUT US-->
