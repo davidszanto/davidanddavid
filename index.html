@@ -176,7 +176,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="background" id="kk">
-							<div class="kkfamily">
+							<div id="innerkk" class="kkfamily">
 							</div>
 						</div>
 					</div>
@@ -194,41 +194,83 @@
 		</div>
 
 		<script>
-			$("#kk").hover(function() {
-				anime.timeline().add({
-					targets: '.kkfamily',
-					width: ['100%', '50%'],
-					easing: "easeOutExpo",
-					duration: 800
-				});
+		
+		function onMouseOut(event) {
+	        e = event.toElement || event.relatedTarget;
+		    if (e.parentNode == this || e == this) {
+		        return;
+		    }
+		    console.log("mouseout");
+		    anime.timeline().add({
+				targets: '.kkfamily',
+				width: ['50%', '100%'],
+				easing: "easeOutExpo",
+				duration: 800
 			});
+		    // handle mouse event here!
+		};
+		document.getElementById("kk").addEventListener('mouseout',onMouseOut,true);
+		
+		function onMouseIn(event) {
+	        e = event.toElement || event.relatedTarget;
+		    if (e == this) {
+		        return;
+		    }
+		    if(event.fromElement == document.getElementById("kk")){
+		    	return;
+		    }
+		    console.log("mousein");
+		    anime.timeline().add({
+				targets: '.kkfamily',
+				width: ['100%', '50%'],
+				easing: "easeOutExpo",
+				duration: 800
+			});
+		    // handle mouse event here!
+		};
+		
+		document.getElementById("kk").addEventListener('mouseover',onMouseIn,true);
+		
+		
+		
+		
+		function onMouseOut2(event) {
+	        e = event.toElement || event.relatedTarget;
+		    if (e.parentNode == this || e == this) {
+		        return;
+		    }
+		    console.log("mouseout");
+		    anime.timeline().add({
+				targets: '.studio68',
+				width: ['50%', '100%'],
+				easing: "easeOutExpo",
+				duration: 800
+			});
+		    // handle mouse event here!
+		};
+		document.getElementById("68").addEventListener('mouseout',onMouseOut2,true);
+	
+		
+		function onMouseIn2(event) {
+	        e = event.toElement || event.relatedTarget;
+		    if (e == this) {
+		        return;
+		    }
+		    if(event.fromElement == document.getElementById("68")){
+		    	return;
+		    }
+		    console.log("mousein");
 
-			$("#kk").mouseout(function() {
-				anime.timeline().add({
-					targets: '.kkfamily',
-					width: ['50%', '100%'],
-					easing: "easeOutExpo",
-					duration: 800
-				});
-			});
+			anime.timeline().add({
+				targets: '.studio68',
+				width: ['100%', '50%'],
+				easing: "easeOutExpo",
+				duration: 800
+			});			
+		};
+		
+		document.getElementById("68").addEventListener('mouseover',onMouseIn2,true);
 
-			$("#68").hover(function() {
-				anime.timeline().add({
-					targets: '.studio68',
-					width: ['100%', '50%'],
-					easing: "easeOutExpo",
-					duration: 800
-				});
-			});
-
-			$("#68").mouseout(function() {
-				anime.timeline().add({
-					targets: '.studio68',
-					width: ['50%', '100%'],
-					easing: "easeOutExpo",
-					duration: 800
-				});				
-			});
 		</script>
 
 		<!-- ABOUT US-->
