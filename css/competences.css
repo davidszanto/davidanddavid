@@ -19,7 +19,7 @@
 
 #content{
     overflow: hidden;
-    height: 50%;
+	min-height: 400px;
     padding: 0;
 }
 
